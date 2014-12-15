@@ -17,6 +17,14 @@ ActiveRecord::Schema.define(version: 20141215144619) do
   enable_extension "plpgsql"
 
   create_table "birds", force: true do |t|
+    t.string   "name"
+    t.string   "latin_name"
+    t.text     "description"
+    t.string   "category"
+    t.string   "image_url"
+    t.string   "info_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
