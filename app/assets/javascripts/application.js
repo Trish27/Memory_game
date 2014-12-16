@@ -14,3 +14,37 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  console.log('Load');
+  fetchBirds();
+
+
+});
+
+function fetchBirds() {
+
+    $.get('/birds')
+      .done(function(data) {
+      data.forEach(renderBird)
+
+    });
+
+}
+
+ function renderBird(data) {
+   var birdContainer = $('#birds-container');
+   var card = $('<div>').addClass('card');
+   var name = $('<h5>').appendTo($('<div>')).addClass('name');
+   var image = $('<img>').appendTo($('<div>').addClass('image'));
+
+   name.text(data.name);
+   image.attr('src', data.image_url);
+
+
+  card.attr('id', data.id)
+    .append(name)
+    .append(image)
+    .appendTo(birdContainer);
+
+}
