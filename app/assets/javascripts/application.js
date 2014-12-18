@@ -15,10 +15,15 @@
 //= require turbolinks
 //= require_tree .
 
+var board = new Board();
+board.shuffle();
+
 $(function() {
   console.log('Load');
   fetchBirds();
+  //makeBoard();
 
+  $('.card').on('click', board.displayCard)
 
 });
 
@@ -29,8 +34,19 @@ function fetchBirds() {
       data.forEach(renderBird)
 
     });
-
 }
+
+// var makeBoard = function() {
+//   for(var row = 0; row < 2; row++) {
+//     var rowDiv = $('<div class="row">').appendTo($('body'))
+//     for(var col = 0; col < 4; col++) {
+//       $('<div class="cell">').attr('id', row * 3 + col).appendTo(rowDiv);
+//     }
+//   }
+//   $('<div id="hud">').appendTo($('body'));
+// };
+
+
 
  function renderBird(data) {
    var birdContainer = $('#birds-container');
