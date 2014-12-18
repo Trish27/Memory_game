@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  background-color: lightgrey;
+  text-align: center;
+}
+body {
+
+  background-color: lightblue;
+  margin: 100px;
+
+
+
+
+}
+
+.cell {
+  background-color: white;
+}
+
+div#birds-Container {
+
+  border-color: black;
+  border-padding: 10px;
+
+
+}
+
+div.cards {
+  border-color: black;
+  border-padding: 20px;
+
+}
+
+img{
+    height: 170px;
+    width: 170px;
+
+}
