@@ -95,11 +95,6 @@ Board.prototype.checkMatch = function(id1, id2) {
 
 
 Board.prototype.startGame = function() {
-  // var cards = [1,1,2,2, 3, 3, 4, 4];
-  //
-  // for (var i=0; i < length; i++) {
-  //    var newCard = new Card(cards[i]);
-  //    this.cards.push(newCard);
-  //    return cards;
-
-};
+  // $.get(cards);
+  board.shuffle();
+}
